@@ -9,3 +9,4 @@ class Manager (BASE):
     id = Column (Integer(), primary_key=True)
     name = Column(String())
     contact = Column(String())
+    email = Column (String(60), unique=True)

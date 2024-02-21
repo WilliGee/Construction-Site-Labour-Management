@@ -1,5 +1,6 @@
 from .db import BASE
 from sqlalchemy import Column, Integer, DateTime, String
+from sqlalchemy.orm import relationship
 
 class Supervisor (BASE):
 
