@@ -1,5 +1,5 @@
 from lib.db import BASE, engine, session
-from lib import Labourer
+from lib import Casual, Supervisor, Manager
 from datetime import datetime
 import ipdb
 
@@ -9,16 +9,16 @@ if __name__ == "__main__":
 
     BASE.metadata.create_all(engine)
 
-    Labourer1 = Labourer(
-        name = "Amos"
-        gender = "Male"
-        birthdate = datetime(year=1994, month=2, day=3)
-        service_number = 35467
+    Casual1 = Casual(
+        name="Amos",
+        gender="Male",
+        birthdate=datetime(year=1994, month=2, day=3),
+        service_number=35467
     )
 
-    session.add(Labourer1)
-    session.query(Labourer).update()
-    session.commit()
+    session.add(Casual1)
+    #session.query(Casual).update()
+    #session.commit()
 
 
 

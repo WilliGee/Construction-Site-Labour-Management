@@ -1,16 +1,17 @@
 from .db import BASE
 from sqlalchemy import Column, Integer, DateTime, String
 
-class Labourer (BASE):
+class Casual (BASE):
 
-    __tablename__ = "labourers"
+    __tablename__ = "casuals"
 
 
     id = Column (Integer(), primary_key=True)
     name = Column(String())
     gender = Column(String())
-    Birthdate = Column(Integer())
+    birthdate = Column(Integer())
     service_number = Column (Integer())
+    casual_id = Column (Integer())
 
-    def work(self, materials):
-        print ("Building", materials)
+    def work(self):
+        print ("Trade")
